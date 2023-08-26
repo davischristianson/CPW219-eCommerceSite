@@ -11,9 +11,9 @@ This will all come together to make a functioning website that is both efficient
 ![image](https://github.com/davischristianson/CPW219-eCommerceSite/assets/131329691/ed384cb0-d7cc-47c6-87bb-34c0c850a519)
 - These features should come when cloning or downloading the code but if for some reason don't have them in the files then make sure to have the following:
   - Must have Bootstrap installed
-     - Installed at version 5.1.0
+     - Installed at least version 5.1.0
   - Should have jQuery installed as well
-     - Installed at version 3.5.1
+     - Installed at least version 3.5.1
   - Will find them in the "wwwroot" folder, under the "lib". Should follow this path wwwroot/lib/bootstrap or wwwroot/lib/jquery
 
     ![Screenshot 2023-08-26 111411](https://github.com/davischristianson/CPW219-eCommerceSite/assets/131329691/ecdfc6f4-e599-4462-bc7a-12f9a5dc5fdc)

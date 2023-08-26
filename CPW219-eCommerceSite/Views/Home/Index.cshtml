@@ -4,6 +4,10 @@
 
 <h1 class="display-1">Welcome to Davis' Paint</h1>
 
+<div class="alert alert-info" role="alert">
+    <strong>Paint is on sale! Get some before this special event is over!</strong>
+</div>
+
 <div class="table-responsive">
     <table class="table">
         <thead>
@@ -29,13 +33,75 @@
                 <td>Moonless Night</td>
                 <td>Black</td>
             </tr>
+            <tr>
+                <!-- Added a badge, rounded, to highlight a new product being offered -->
+                <th scope="row"><span class="badge rounded-pill bg-secondary">New</span> 4</th>
+                <td>Milk White</td>
+                <td>White</td>
+            </tr>
         </tbody>
     </table>
 </div>
+<br />
+
 
 <h2>About Davis' Paint</h2>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam dolor, venenatis eget quam at, maximus vulputate velit. 
-    Morbi quis facilisis nisl. Fusce tincidunt, sem vel volutpat dapibus, elit dui elementum augue, vel rhoncus ipsum orci at est. Vestibulum pharetra laoreet posuere. 
-    Integer bibendum eros tortor, eget posuere lacus porttitor ut. Maecenas non urna lacinia, auctor libero finibus, dictum est. Donec eu egestas ligula, nec semper velit.
-</p>
+<!-- This is a bootstrap component known as Accordion and will be used in the about section of the home page -->
+<!-- First accordion item -->
+<div class="accordion" id="accordionAbout">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                About the company <!-- Here is the name of the first accordion item -->
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionAbout">
+            <div class="accordion-body">
+                <!-- Text inside the accordion for the user to read -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam dolor, venenatis eget quam at, maximus vulputate velit.
+                    Morbi quis facilisis nisl. Fusce tincidunt, sem vel volutpat dapibus, elit dui elementum augue, vel rhoncus ipsum orci at est. Vestibulum pharetra laoreet posuere.
+                    Integer bibendum eros tortor, eget posuere lacus porttitor ut. Maecenas non urna lacinia, auctor libero finibus, dictum est. Donec eu egestas ligula, nec semper velit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second accordion item -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                About the Owner <!-- Here is the name of the second accordion item -->
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionAbout">
+            <div class="accordion-body">
+                <!-- Text inside the accordion for the user to read -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam dolor, venenatis eget quam at, maximus vulputate velit.
+                    Morbi quis facilisis nisl. Fusce tincidunt, sem vel volutpat dapibus, elit dui elementum augue, vel rhoncus ipsum orci at est. Vestibulum pharetra laoreet posuere.
+                    Integer bibendum eros tortor, eget posuere lacus porttitor ut. Maecenas non urna lacinia, auctor libero finibus, dictum est. Donec eu egestas ligula, nec semper velit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third accordion item -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                About the Product <!-- Here is the name of the third accordion item -->
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionAbout">
+            <div class="accordion-body">
+                <!-- Text inside the accordion for the user to read -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quam dolor, venenatis eget quam at, maximus vulputate velit.
+                    Morbi quis facilisis nisl. Fusce tincidunt, sem vel volutpat dapibus, elit dui elementum augue, vel rhoncus ipsum orci at est. Vestibulum pharetra laoreet posuere.
+                    Integer bibendum eros tortor, eget posuere lacus porttitor ut. Maecenas non urna lacinia, auctor libero finibus, dictum est. Donec eu egestas ligula, nec semper velit.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

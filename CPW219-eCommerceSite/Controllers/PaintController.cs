@@ -56,5 +56,19 @@ namespace CPW219_eCommerceSite.Controllers
 
             return View(paintToEdit);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Paint paintModel)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Paints.Update(paintModel);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+
+            return View(paintModel);
+        }
     }
 }

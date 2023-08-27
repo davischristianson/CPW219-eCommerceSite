@@ -101,5 +101,17 @@ namespace CPW219_eCommerceSite.Controllers
             TempData["Message"] = "This paint product was already deleted!";
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            Paint? paintDetails = await _context.Paints.FindAsync(id);
+
+            if(paintDetails == null)
+            {
+                return NotFound();
+            }
+
+            return View(paintDetails);
+        }
     }
 }

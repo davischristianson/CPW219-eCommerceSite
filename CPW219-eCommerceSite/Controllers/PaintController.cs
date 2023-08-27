@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CPW219_eCommerceSite.Models;
 using CPW219_eCommerceSite.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CPW219_eCommerceSite.Controllers
 {
@@ -12,6 +13,14 @@ namespace CPW219_eCommerceSite.Controllers
         {
             _context = context;
         }
+
+        public async Task<IActionResult> Index()
+        {
+            List<Paint> paints = await _context.Paints.ToListAsync();
+
+            return View(paints);
+        }
+
 
         [HttpGet]
         public IActionResult Create()

@@ -44,5 +44,17 @@ namespace CPW219_eCommerceSite.Controllers
 
             return View(p);
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            Paint paintToEdit = await _context.Paints.FindAsync(id);
+
+            if(paintToEdit == null)
+            {
+                return NotFound();
+            }
+
+            return View(paintToEdit);
+        }
     }
 }

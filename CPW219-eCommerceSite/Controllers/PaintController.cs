@@ -44,5 +44,32 @@ namespace CPW219_eCommerceSite.Controllers
 
             return View(p);
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            Paint paintToEdit = await _context.Paints.FindAsync(id);
+
+            if(paintToEdit == null)
+            {
+                return NotFound();
+            }
+
+            return View(paintToEdit);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Paint paintModel)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Paints.Update(paintModel);
+                await _context.SaveChangesAsync();
+
+                TempData["Message"] = $"{paintModel.Title} was updated successfully!";
+                return RedirectToAction("Index");
+            }
+
+            return View(paintModel);
+        }
     }
 }

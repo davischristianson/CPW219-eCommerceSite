@@ -20,12 +20,14 @@ namespace CPW219_eCommerceSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Paint p)
+        public async Task<IActionResult> Create(Paint p)
         {
             if(ModelState.IsValid)
             {
                 _context.Paints.Add(p); // Prepares insert
-                _context.SaveChanges(); // Executes pending insert
+                // For async code info in the tutorial
+                // https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-7.0#asynchronous-code
+                await _context.SaveChangesAsync(); // Executes pending insert
 
                 ViewData["Message"] = $"{p.Title} was added successfully!";
                 return View();

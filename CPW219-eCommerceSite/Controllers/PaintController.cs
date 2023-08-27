@@ -71,5 +71,35 @@ namespace CPW219_eCommerceSite.Controllers
 
             return View(paintModel);
         }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            Paint? paintToDelete = await _context.Paints.FindAsync(id);
+
+            if (paintToDelete == null)
+            {
+                return NotFound();
+            }
+
+            return View(paintToDelete);
+        }
+
+        // Action makes the method act like the Delete function despite having a different name
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            Paint paintToDelete = await _context.Paints.FindAsync(id);
+
+            if(paintToDelete != null)
+            {
+                _context.Paints.Remove(paintToDelete);
+                await _context.SaveChangesAsync();
+                TempData["Message"] = paintToDelete.Title + " was deleted successfully!";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Message"] = "This paint product was already deleted!";
+            return RedirectToAction("Index");
+        }
     }
 }

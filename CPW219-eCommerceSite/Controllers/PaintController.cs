@@ -65,6 +65,7 @@ namespace CPW219_eCommerceSite.Controllers
                 _context.Paints.Update(paintModel);
                 await _context.SaveChangesAsync();
 
+                TempData["Message"] = $"{paintModel.Title} was updated successfully!";
                 return RedirectToAction("Index");
             }
 

@@ -3,6 +3,7 @@ using CPW219_eCommerceSite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CPW219_eCommerceSite.Migrations
 {
     [DbContext(typeof(PaintProductContext))]
-    partial class PaintProductContextModelSnapshot : ModelSnapshot
+    [Migration("20230830020547_AddedMember")]
+    partial class AddedMember
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,9 +41,11 @@ namespace CPW219_eCommerceSite.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MemberId");

@@ -36,3 +36,6 @@ For jQuery JavaScript Libraries:
 
 For session and state management in ASPNET Core: 
 - https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-6.0
+
+For configuring session code: 
+- https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-7.0#configure-session-state

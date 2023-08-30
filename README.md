@@ -35,4 +35,4 @@ For jQuery JavaScript Libraries:
 - https://jquery.com/
 
 For session and state management in ASPNET Core:
-https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-6.0
+- https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-6.0
